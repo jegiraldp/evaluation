@@ -2,29 +2,178 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parcial Ing. Ciencia de Datos</title>
+
     <style>
-        body {
-            background: transparent;
-            font-family: Arial, sans-serif;
+        :root {
+            --verde-politecnico: #00843D;
+            --verde-oscuro: #006B32;
+            --verde-claro: #E8F5EE;
+            --gris-oscuro: #263238;
+            --gris: #607D8B;
+            --blanco: #FFFFFF;
+            --rojo: #C62828;
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(
+                135deg,
+                #f4f8f6 0%,
+                #ffffff 50%,
+                #e8f5ee 100%
+            );
+            color: var(--gris-oscuro);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 750px;
+            background: var(--blanco);
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
+            border-top: 6px solid var(--verde-politecnico);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: var(--verde-oscuro);
+            font-size: 30px;
+            line-height: 1.25;
+            text-align: center;
+        }
+
+        .instruccion {
+            background: var(--verde-claro);
+            border-left: 5px solid var(--verde-politecnico);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .alerta {
+            color: var(--rojo);
+            font-weight: 700;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 14px 0;
+        }
+
         a {
             display: block;
-            margin: 10px 0;
+            padding: 18px 22px;
+            background: var(--blanco);
+            border: 2px solid #d9e5df;
+            border-radius: 12px;
             text-decoration: none;
-            color: blue;
+            color: var(--verde-oscuro);
             font-size: 18px;
+            font-weight: 600;
+            transition: all 0.25s ease;
+        }
+
+        a:hover {
+            background: var(--verde-politecnico);
+            color: var(--blanco);
+            border-color: var(--verde-politecnico);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 18px rgba(0, 132, 61, 0.25);
+        }
+
+        a:active {
+            transform: translateY(0);
+        }
+
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--gris);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            a {
+                font-size: 16px;
+                padding: 16px;
+            }
         }
     </style>
 </head>
+
 <body>
-	<h1>Parcial 1 - Introducción a la Ingeniería en Ciencia de Datos</h1>
-    <ul>
-    <p>Seleccione el grupo  -- <b><font color="red">Atención:</font></b> El formulario se activa a la hora de la clase</p>
-    <li><a href="https://forms.gle/C82jEZGqfsVgnTZDA">Grupo 64  (8:00 am) </a></li>
-    <li><a href="https://forms.gle/fnQ29jhgDXDup8yLA">Grupo 65  (4:00 pm) </a></li>
-    <li><a href="https://forms.gle/X59iCmu31DPpDuUd7">Grupo 66  (6:00 pm) </a></li>
-</ul>
+
+    <main class="container">
+
+        <h1>
+            Parcial 1<br>
+            <small>Introducción a la Ingeniería en Ciencia de Datos</small>
+        </h1>
+
+        <div class="instruccion">
+            <strong>Seleccione el grupo:</strong><br>
+            <span class="alerta">⚠ Atención:</span>
+            El formulario se activa a la hora de la clase.
+        </div>
+
+        <ul>
+            <li>
+                <a href="https://forms.gle/C82jEZGqfsVgnTZDA">
+                    Grupo 64 — 8:00 a. m.
+                </a>
+            </li>
+
+            <li>
+                <a href="https://forms.gle/fnQ29jhgDXDup8yLA">
+                    Grupo 65 — 4:00 p. m.
+                </a>
+            </li>
+
+            <li>
+                <a href="https://forms.gle/X59iCmu31DPpDuUd7">
+                    Grupo 66 — 6:00 p. m.
+                </a>
+            </li>
+        </ul>
+
+        <div class="footer">
+            Ingeniería en Ciencia de Datos
+        </div>
+
+    </main>
 
 </body>
 </html>
